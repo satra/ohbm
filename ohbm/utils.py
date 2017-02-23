@@ -5,8 +5,8 @@ general functions for the api
 
 '''
 
-from pokemon.skills import get_ascii
-import __init__
+#from pokemon.skills import get_ascii
+from . import __init__
 import xmltodict
 import requests
 import stat
@@ -26,7 +26,7 @@ def get_url(url):
             result = result['rst']
         if "err" in result:
             message = "%s (%s)" %(result['err']['@msg'],result['err']['@code'])
-            get_ascii(name="psyduck",message=message)
+            #get_ascii(name="psyduck",message=message)
         return result
 
 
@@ -52,10 +52,10 @@ def parse_item(result,item):
     :param item: the name of the item (eg, event,exhibitor)
     '''
     if item in result:
-        print("Found %s!" %(item))
+        print(("Found %s!" %(item)))
         result = result[item]
     else:
-        print("No %s found." %(item))
+        print(("No %s found." %(item)))
     return ordered_to_dict(result)
 
 
@@ -70,9 +70,9 @@ def parse_items(result,item):
     if items in result:
         if item in result[items]:
             result = result[items][item]
-            print("Found %s %s!" %(len(result),items))
+            print(("Found %s %s!" %(len(result),items)))
     else:
-        print("No %s found." %(items))
+        print(("No %s found." %(items)))
     return ordered_to_dict(result)
 
 

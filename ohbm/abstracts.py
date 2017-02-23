@@ -19,14 +19,15 @@ class Abstracts():
         :param args: a dictionary of {"argumentName":value} to pass to the URL
         '''
         if args != None:
-            for arg_name,arg_value in args.iteritems():
+            for arg_name,arg_value in args.items():
                 if arg_value != None:
                     url = "%s&%s=%s" %(url,arg_name,arg_value)
         url = "%s&apiKey=%s" %(url,self.api.key)
         return get_url(url)
- 
 
-    def getAbstracts(self,categoryID=None,speakerID=None,abstractTypeID=None,acceptedFlag=None):
+
+    def getAbstracts(self,categoryID=None,speakerID=None,abstractTypeID=None,
+            acceptedFlag=None):
         '''getAbstracts
         Returns an XML payload containing a full listing of all abstract data. Abstract data consists primarily
         of the title, abstract number, purpose, materials & methods, results & conclusions.
@@ -55,7 +56,7 @@ class Abstracts():
         '''getAbstract
         Returns an XML payload containing a full listing of one abstract. Abstract data consists primarily of
         the title, abstract number, purpose, materials & methods, results & conclusions. Note: The result set
-        provides urls to the figures or documents which are actual files.        
+        provides urls to the figures or documents which are actual files.
         Sample Request URL: http://.../?do=cnt.getservice&service=getAbstract
 
         Parameter Options:

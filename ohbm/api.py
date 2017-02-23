@@ -9,8 +9,8 @@ are exposed.
 
 '''
 
-from ohbm.settings import access_token, base #for development only
-from pokemon.skills import get_avatar, get_ascii
+#from ohbm.settings import access_token, base #for development only
+#from pokemon.skills import get_avatar, get_ascii
 
 # Imports for different function classes
 from ohbm.categories import Categories
@@ -30,7 +30,7 @@ base = "https://ww5.aievolution.com/hbm1601"
 
 class Api():
 
-    def __init__(self,access_token=None):
+    def __init__(self,access_token=None,url=None):
 
         # For development only - should return error without one.
         if access_token == None:
@@ -41,9 +41,12 @@ class Api():
             self.key = access_token
 
         # Alert the user we are good, show pokemon avatar
-        get_avatar(access_token,include_name=False)
+        #get_avatar(access_token,include_name=False)
         print("\nWelcome, OHBM Trainer!")
-        self.base = base
+        if not url:
+            self.base = base
+        else:
+            self.base=url
 
         # Instantiate each class
         self.Abstracts = Abstracts(api=self)

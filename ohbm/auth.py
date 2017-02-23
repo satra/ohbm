@@ -19,7 +19,7 @@ class Authenticate():
         :param args: a dictionary of {"argumentName":value} to pass to the URL
         '''
         if args != None:
-            for arg_name,arg_value in args.iteritems():
+            for arg_name,arg_value in args.items():
                 if arg_value != None:
                     url = "%s&%s=%s" %(url,arg_name,arg_value)
         url = "%s&apiKey=%s" %(url,self.api.key)
@@ -39,7 +39,7 @@ class Authenticate():
         if 'authentication' in result:
             result = result['authentication']
             if "@result" in result:
-                print("Credentials are %s" %(result['@result']))
+                print(("Credentials are %s" %(result['@result'])))
     
         return ordered_to_dict(result)
 
