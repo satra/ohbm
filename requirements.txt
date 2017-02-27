@@ -1,6 +1,8 @@
 numpy
 flask
 gitpython
-pokemon
 xmltodict
 flask-restful
+nltk
+stop_words
+gensim
