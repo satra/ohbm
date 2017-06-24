@@ -1,5 +1,5 @@
 
-In this fork of Vanessa Sochat's Python API for the OHBM abstract database we have added a Jupityer notebook that dumps the entire abstracts and events database into a JSON file then loads that JSON file into Elastic Search for easy and fleixible searching.
+In this fork of Vanessa Sochat's Python API for the OHBM abstract database we have added a Jupyter notebook that dumps the entire abstracts and events database into a JSON file then loads that JSON file into Elastic Search for easy and fleixible searching.
 
 # Instructions
 * Make sure you have installed [Docker](http://docker.com), Anaconda, Jupyter
