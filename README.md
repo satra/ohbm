@@ -6,7 +6,7 @@ In this fork of Vanessa Sochat's Python API for the OHBM abstract database we ha
 * Clone this repo
 * Compose a set of docker containers using the included docker-compose.yml file. (More details here: https://www.elastic.co/blog/releasing-beta-version-of-elastic-docker-images)
 * Open doc/ohbm-abstract-search.ipynb in Jupyter
-* Run all of the cells to retrieve and import the JSON into Elastic Search
+* Run all of the cells to retrieve and import the JSON into Elastic Search (note you will need an access key)
 * Open http://localhost:5601/ in your browser and enjoy unrestricted searching bliss
 
 
